@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+
+    <div class="d-flex align-items-center justify-content-center mt-4">
+        <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+        <h2 class="mt-3">Contactez-Nous</h2>
+        <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <form method="POST" action="">
+            <fieldset>
+                <div class="form-group">
+                    <label for="firstname" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom</font></font></label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Entrez votre nom">
+                    <small class="form-text text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prénom</font></font></label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Entrez votre prénom">
+                    <small class="form-text text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="tel" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Numéro de téléphone</font></font></label>
+                    <input type="tel" class="form-control" id="tel" placeholder="Entrez votre Numéro">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adresse e-mail</font></font></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez l'e-mail">
+                    <small id="emailHelp" class="form-text text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</font></font></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="Select1" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pourquoi nous contactez-vous ?</font></font></label>
+                    <select class="form-select" id="Select1">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></option>
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Réservation</font></font></option>
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Demande particulière</font></font></option>
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Question sur l'établissement</font></font></option>
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mentionnez mes allergies</font></font></option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleTextarea" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dites-nous en plus :)</font></font></label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button type="submit" class="btn btn-primary mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soumettre</font></font></button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="d-flex flex-column align-items-center justify-content-center mt-4">
+        <div class="d-flex align-items-center justify-content-center">
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+            <h2 class="mt-3">Nos horaire d'ouvertures</h2>
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+        </div>
+        <ul class="opentime mt-3">
+            <li>Lundi : 12h-14h / 19H-22h</li>
+            <li>Mardi : 12h-14h / 19H-22h</li>
+            <li>Mercredi : Fermé</li>
+            <li>Jeudi : 12h-14h / 19H-22h</li>
+            <li>Vendredi : 12h-14h / 19H-22h</li>
+            <li>Samedi : 19H-23h</li>
+            <li>Dimanche : 12h-14h</li>
+        </ul>
+    </div>
+
+    <div class="d-flex flex-column align-items-center justify-content-center mt-4">
+        <div class="d-flex align-items-center justify-content-center">
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+            <h2 class="mt-3">Où Nous trouver ?</h2>
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+        </div>
+        <div class="mt-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2793.428998375996!2d5.860461315409845!3d45.56181097910219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDMzJzQyLjUiTiA1wrA1MSc0NS41IkU!5e0!3m2!1sfr!2sfr!4v1679760218949!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="text-center mt-2">Nous disposons d'un parking, vous n'avez plus qu'à vous garez et déguster !</p>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ReservationController!{% endblock %}
+
+{% block body %}
+<div class="container d-flex flex-column align-items-center justify-content-center">
+
+
+        <div class="d-flex align-items-center justify-content-center mt-4">
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+            <h2 class="mt-3">Reservation</h2>
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+        </div>
+
+        {{ form(reservationType) }}
+
+
+</div>
+
+{% endblock %}

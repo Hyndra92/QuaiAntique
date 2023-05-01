@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CarteController!{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <div class="d-flex align-items-center justify-content-center mt-4">
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+            <h2 class="mt-3">Nos cartes et menus</h2>
+            <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+        </div>
+
+        <div class="container col-md-10 d-flex align-items-center justify-content-center">
+            <div class="card borderGreen mt-5 p-3">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+                    <h2 class="mt-3">Notre carte</h2>
+                    <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+                </div>
+
+                <ul class="mt-1">
+                    <p class="textMenu text-center text-primary">Entrées</p>
+                    {% for plat in entrees %}
+                    <li class="text-dark text-center"><b>{{ plat.name }}</b><span class="ms-1">{{ plat.price }} €</span></br><small>{{ plat.description }}</small></li></br>
+                    {% endfor %}
+                </ul>
+
+                <ul>
+                    <p class="textMenu text-center text-primary">Plats</p>
+                    {% for plat in plats %}
+                        <li class="text-dark text-center"><b>{{ plat.name }}</b><span class="ms-1">{{ plat.price }} €</span></br><small>{{ plat.description }}</small></li></br>
+                    {% endfor %}
+                </ul>
+
+                <ul>
+                    <p class="textMenu text-center text-primary">Desserts</p>
+                    {% for plat in desserts %}
+                        <li class="text-dark text-center"><b>{{ plat.name }}</b><span class="ms-1">{{ plat.price }} €</span></br><small>{{ plat.description }}</small></li></br>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="container col-md-10 d-flex align-items-center justify-content-center">
+            <div class="card borderGreen mt-5">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+                    <h2 class="mt-3">Carte des Vins et boissons</h2>
+                    <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+                </div>
+
+                <ul class="mt-1">
+                    <p class="textMenu text-center text-primary">Vins</p>
+                    {% for plat in Vins %}
+                        <li class="px-5 text-dark text-center"><b>{{ plat.name }}</b><span class="ms-1">{{ plat.price }} €</span></br><span class="small">{{ plat.description }}</span></li></br>
+                    {% endfor %}
+                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <p class="textMenu text-center text-primary">Eaux</p>
+                            {% for plat in Eaux %}
+                                <li class="text-dark text-center"><b>{{ plat.name }}</b><span class="ms-1">{{ plat.price }} €</span></br><small>{{ plat.description }}</small></li></br>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul>
+                            <p class="textMenu text-center text-primary">Sodas</p>
+                            {% for plat in Sodas %}
+                                <li class="text-dark text-center"><b>{{ plat.name }}</b><span class="ms-1">{{ plat.price }} €</span></br><small>{{ plat.description }}</small></li></br>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container col-md-6 d-flex flex-column align-items-start justify-content-center">
+        {% for menu in menus %}
+            <div class="card fondvert w-100 mt-5">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+                    <h2 class="mt-3">{{ menu.name }}</h2>
+                    <img class="logomenu img-fluid" src="{{ asset('asset/image/imgdoss.png') }}">
+                </div>
+
+                {% if menu.entrees|length > 0 %}
+                <ul class="mt-1"><br>
+                    <p class="textMenu">Entrés :</p>
+                    {% for plat in menu.entrees %}
+                    <li class="mt-2">{{ plat.name }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <ul class="mt-1"><br>
+                    <p class="textMenu">Plats :</p>
+                    {% for plat in menu.principale %}
+                        <li class="mt-2">{{ plat.name }}</li>
+                    {% endfor %}
+                </ul>
+
+                <ul class="mt-1"><br>
+                    <p class="textMenu">Desserts :</p>
+                    {% for plat in menu.desserts %}
+                        <li class="mt-2">{{ plat.name }}</li>
+                    {% endfor %}
+                </ul>
+
+
+                <p class="text-center">{{ menu.price }} euros, {% if menu.entrees|length > 0 %} entrée, {% endif %} plat, dessert.</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

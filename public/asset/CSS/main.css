@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+/*-------------- Accueil ---------------*/
+.logo{
+    height: 150px;
+    width: 150px;
+}
+
+.imgSlider{
+    height: 600px;
+}
+
+@media screen {
+    .imgSlider{
+        height: auto;
+    }
+}
+/*------------- Fin Accueil------------*/
+
+
+/*---------- Gallerie plats ----------*/
+.example {
+    position: relative;
+    padding: 0;
+    width: auto;
+    display: block;
+    overflow: hidden;
+}
+.content {
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #5ecfa2;
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 600px;
+    height: 400px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+}
+.example .content:hover {
+    opacity:1;
+}
+
+.example .content .text {
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+.example .content:hover .text {
+    opacity: 1;
+    transform: translateY(250px);
+    -webkit-transform: translateY(250px);
+}
+/*---------- Fin gallerie plats ----------*/
+
+
+/*---------- Carte ---------*/
+.logomenu{
+    height: 50px;
+    width: 50px;
+}
+
+.fondvert{
+    text-align: center;
+    background-color: #78c2ad;
+}
+
+.borderGreen{
+    border: 3px solid #78c2ad;
+}
+
+/*.card{
+    width: 60%;
+    text-align: center;
+    background-color:  #78c2ad;
+}*/
+
+ol, ul {
+    padding-left: 0rem
+}
+
+.card ul li{
+    color: white;
+}
+
+.textMenu{
+    font-size: 1.5rem;
+}
+/*------------Fin carte --------*/
+
+
+
+
+/*---- Contactez-nous ----------*/
+textarea{
+    resize: none;
+}
+
+.opentime{
+    background-color: #5ecfa2;
+    height: 300px;
+    width: 400px;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
+}
+/*---- Fin contactez-nous ----------*/
+
+
+
+/*---- Login -----*/
+.loginForm{
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+    background-color: #78C2AD;
+    border-radius: 10px;
+}
+
+.btnLogin{
+    background-color: #f3969a;
+}
+
+.loginTitle{
+    font-size: 17px;
+}
+/*---- Fin login -----*/
+
+
+
+
+/*---- Inscription -----*/
+.registerForm{
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    background-color: #78C2AD;
+    border-radius: 10px;
+}
+
+/*---- Fin inscription -----*/
+
+
+
+
+/*---- Reservation -----*/
+
+.reserveForm{
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    background-color: #5ecfa2;
+    border-radius: 10px;
+}
+
